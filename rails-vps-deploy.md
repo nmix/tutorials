@@ -148,6 +148,8 @@ set :deploy_to, '/home/deploy/myapp'
 set :linked_files, %w{config/database.yml config/secrets.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 ```
+> Примечание. Если предполагается использование `rails console` на сервере, то необходимо удалить директорию `bin/` из поля `:linked_dirs`.
+
 Переименовываем файл *database.yml* и *secrets.yml* и добавляем их в *.gitignore*
 ```bash
 client$ git mv config/database.yml config/database.yml.examle
