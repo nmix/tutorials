@@ -34,4 +34,15 @@ ruby -v
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 gem install bundler
 ```
+#### Обновляем *ruby*
 
+```bash
+cd
+cd .rbenv/plugins/ruby-build/
+git pull
+cd
+rbenv install -l
+rbenv install X.Y.Z
+rbenv global X.Y.Z
+ruby -v
+```
