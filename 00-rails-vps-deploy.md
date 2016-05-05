@@ -155,8 +155,8 @@ client$ bundle
 Копируем файлы *database.yml* и *secrets.yml* и добавляем их в *.gitignore*
 
 ```bash
-client$ git mv config/database.yml config/database.yml.examle
-client$ git mv config/secrets.yml config/secrets.yml.example
+client$ cp config/database.yml config/database.yml.examle
+client$ cp config/secrets.yml config/secrets.yml.example
 ```
 
 ```bash
