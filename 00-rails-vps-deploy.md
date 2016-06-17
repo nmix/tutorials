@@ -326,7 +326,7 @@ client$ cap staging rails:console
 
 Создаем файл конфигурации сайта
 ```bash
-server$ sudo vim /etc/nginx/sites-available/myapp.ru
+server$ sudo vim /etc/nginx/sites-available/myapp
 ```
 
 Вставляем следующий текст
@@ -351,7 +351,7 @@ server {
 ```bash
 server$ cd /etc/nginx/site-enabled
 server$ sudo rm default
-server$ sudo ln -s /etc/nginx/site-available/mysite.ru mysite.ru
+server$ sudo ln -s /etc/nginx/sites-available/myapp myapp
 ```
 
 Перезапускаем nginx
