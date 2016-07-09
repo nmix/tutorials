@@ -23,14 +23,14 @@ sudo service nginx stop
 ```
 Если всё прошло удачно, то они (сертификаты) материализуются директории `/etc/letsencrypt/live/example.ru/`.
 
-## Улучшенная защита
+### Улучшенная защита
 
 Создаем файл DH-шифров
 ```bash
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
 
-## Настройка nginx
+### Настройка nginx
 
 Приводим файл конфигурации сайта (например, `/etc/nginx/site-available/default`)
 ```nginx
@@ -120,4 +120,42 @@ sudo service nginx start
 
 > ВАЖНО. Сертификат выдается на 3 месяца с возможностью продления.
 
-Не лишним будет ознакомиться со [статьей](https://habrahabr.ru/post/252507/), в которой приводится перечень действий при миграции на HTTPS. 
+Не лишним будет ознакомиться со [статьей](https://habrahabr.ru/post/252507/), в которой приводится перечень действий при миграции на HTTPS.
+
+## Продление сертификата
+
+Сертификат выдается на 90 дней. Рекомендуется продливать сертификат каждый 60 дней.
+
+Останавливаем Nginx
+
+```bash
+sudo service nginx stop
+```
+
+Запускаем обновление сертификата
+```bash
+cd /lets/encrypt/folder
+./letsencrypt-auto renew
+...
+Requesting root privileges to run certbot...
+  /home/deploy/.local/share/letsencrypt/bin/letsencrypt renew
+-------------------------------------------------------------------------------
+Processing /etc/letsencrypt/renewal/pcspectrum.ru.conf
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+new certificate deployed without reload, fullchain is
+/etc/letsencrypt/live/pcspectrum.ru/fullchain.pem
+-------------------------------------------------------------------------------
+
+Congratulations, all renewals succeeded. The following certs have been renewed:
+  /etc/letsencrypt/live/pcspectrum.ru/fullchain.pem (success)
+```
+
+Запускаем Nginx
+
+```bash
+sudo service nginx start
+```
+
+
