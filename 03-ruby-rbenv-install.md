@@ -20,7 +20,7 @@ exec $SHELL
 git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 ```
 
-Переходим по ссылке https://www.ruby-lang.org/ru/downloads/ и смотрим текущую (свежую) версию Ruby. Далее устанавливаем ее (в нашем случае 2.2.3)
+Переходим по ссылке https://www.ruby-lang.org/ru/downloads/ и смотрим текущую версию Ruby. Далее устанавливаем ее (в нашем случае 2.2.3)
 
 ```bash
 rbenv install 2.2.3
