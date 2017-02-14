@@ -34,11 +34,18 @@
 
 
 Сценарий использования гема:
+
 1. Добавление гема в Gemfile ( `gem 'dagraph'` )
+
 2. Установка гема ( `bundle install` )
+
 3. Добавление метода в модель ( `acts_as_dagraph` )
+
 4. Генерация необходимых миграций ( `rails generate dagraph:migration` )
+
 5. Применение миграций ( `bundle exec rake db:migrate` )
+
+
 
 Тестирование осуществлять средствами фреймворка `RSpec`.
 
