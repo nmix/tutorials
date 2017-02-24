@@ -39,10 +39,9 @@ server$ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev
 См. `03-ruby-rbenv-install.md`
 
 ### Устанавливаем nginx и passenger
-
+For Ubutntu 16.04 https://www.phusionpassenger.com/library/install/nginx/install/oss/xenial/
 ```bash
 server$ cd
-#
 # Install Phusion's PGP key to verify packages
 gpg --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
 gpg --armor --export 561F9B9CAC40B2F7 | sudo apt-key add -
