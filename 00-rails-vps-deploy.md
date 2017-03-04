@@ -39,7 +39,9 @@ server$ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev
 См. `03-ruby-rbenv-install.md`
 
 ### Устанавливаем nginx и passenger
+
 For Ubuntu 14.04 https://www.phusionpassenger.com/library/install/nginx/install/oss/trusty/
+
 For Ubutntu 16.04 https://www.phusionpassenger.com/library/install/nginx/install/oss/xenial/
 
 ### Запускаем сервер nginx
